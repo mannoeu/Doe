@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maratona Dev | 3ª Edição</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <img src="/logo.png" alt="logo">
+    <h2>A sua doação importa</h2>
+    <p>Até 3 vidas com 1 doação</p>
+    <p>Mais de 30.000 doações são necessárias todos os dias</p>
+    <p>Apenas 1,9% da população brasileira, doa sangue.</p>
+    <button>Quero ajudar</button>
+  </header>
+  <section class="form hide">
+    <h2>Entrar na lista de doadores</h2>
+    <form action="/" method="POST">
+      <input type="text" required="true" name="name" placeholder="nome completo">
+      <input type="text" required="true" name="email" placeholder="e-mail">
+      <input type="text" required="true" name="blood" placeholder="tipo sanguíneo">
+      <button>Quero ajudar</button>
+    </form>
+  </section>
+  <main>
+    <h2>Últimos <span>doadores</span></h2>
+    <section class="donors">
+      {% for donor in donors %}
+        <div class="donor">
+          <div class="blood">{{donor.blood}}</div>
+          <p>{{donor.name}}</p>
+        </div>
+      {%endfor%}
+    </section>
+  </main>
+  <footer>Com ♥ Mannoeu</footer>
+  <script src="/script.js"></script>
+</body>
+</html>
+
