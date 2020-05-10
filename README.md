@@ -2,10 +2,9 @@
 Project developed during a MaratonaDev 3.0
 
 ## Install Dependencies
-1. mysql
-2. express
-3. body-parser
-4. nunjucks
+```
+npm install mysql express body-parser nunjucks
+```
 
 ## In MySQL
 <p>
